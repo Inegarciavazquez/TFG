@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <Button
+        android:id="@+id/boton_cambiar"
+        android:layout_width="0dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#AED581"
+        android:onClick="BotonCambiar_Click"
+        android:text="cambiar  ARCHIVO DE LECTURA"
+        app:layout_constraintBottom_toTopOf="@+id/boton_continuar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:text="Introduzca el nombre del archivo de referencia (debe de estar ubicado en la memoria interna de su dispositivo)."
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/texto_nombrearchivo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:textColor="@color/colorGris"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:text=".xml"
+        android:textColor="@color/colorGris"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/texto_nombrearchivo"
+        app:layout_constraintEnd_toStartOf="@+id/BotonAbrir" />
+    <Button
+        android:id="@+id/BotonAbrir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:background="#AED581"
+        android:onClick="BotonAbrir_Click"
+        android:text="Abrir"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <Spinner
+        android:id="@+id/desplegable_relacionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/boton_relacionar"
+        app:layout_constraintStart_toStartOf="@+id/texto_relacionar" />
+
+    <TextView
+        android:id="@+id/texto_relacionar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        android:text="Seleccione el archivo para relacionar la información:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto_nombrearchivo" />
+    <Button
+        android:id="@+id/boton_relacionar"
+        android:layout_width="114dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:background="#DCE775"
+        android:onClick="BotonRelacionar_Click"
+        android:text="Relacionar"
+        app:layout_constraintEnd_toEndOf="@+id/BotonAbrir"
+        app:layout_constraintTop_toBottomOf="@+id/texto_relacionar" />
+    <Button
+        android:id="@+id/boton_NoRelacionar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#FFD54F"
+        android:onClick="BotonNoRelacionar_Click"
+        android:text="Cancelar"
+        app:layout_constraintEnd_toEndOf="@+id/boton_relacionar"
+        app:layout_constraintStart_toStartOf="@+id/boton_relacionar"
+        app:layout_constraintTop_toBottomOf="@+id/boton_relacionar" />
+    <Button
+        android:id="@+id/boton_continuar"
+        android:layout_width="0dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="#DCE775"
+        android:onClick="BotonContinuar_Click"
+        android:text="procesar datos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/texto_archivoactual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/texto_archivo_anterior"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:text="Si desea utilizar como archivo de referencia un archivo que haya sido procesado anteriomente selecciónelo:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/BotonSeleccionarArchivoAnterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Spinner
+        android:id="@+id/desplegable_archivo_anterior"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BotonSeleccionarArchivoAnterior"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/BotonSeleccionarArchivoAnterior"
+        android:layout_width="110dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="15dp"
+        android:background="#DCE775"
+        android:onClick="BotonSeleccionarArchivoAnterior_Click"
+        android:text="SELECCIONAR"
+        app:layout_constraintBottom_toBottomOf="@+id/desplegable_archivo_anterior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/desplegable_archivo_anterior" />
+</androidx.constraintlayout.widget.ConstraintLayout>
